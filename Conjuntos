@@ -1,0 +1,23 @@
+// Conjuntos
+#include <stdio.h>
+
+int main() {
+    int A, B, T;
+    
+    printf("Numero de eementos de A: \n");
+        scanf("%d", &A);
+    printf("Numero de eementos de B: \n");
+        scanf("%d", &B);
+    printf("Tota de eementos: \n");
+        scanf("%d", &T);
+    
+    printf("\n");
+        
+    printf("A: %d\t", A);
+    printf("B: %d\n", B);
+    
+    int I = T - (A + B);
+    printf("Interseção: %d\n", I);
+    
+    return 0;
+}
