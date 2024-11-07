@@ -1,0 +1,55 @@
+// Calculadora Básica
+#include <stdio.h>
+#include <math.h>
+
+void ler(){
+    int operacao = 0;
+    scanf("%d", &operacao);
+    if(operacao > 6){
+        printf("Operacao invalida\n");
+        ler();
+    }else{
+        int a =0, b=0;
+        switch (operacao) {
+          case 1:
+                scanf("%d", &a);
+                scanf("%d", &b);
+            printf("%d + %d = %d \n", a, b, a+b);
+            break;
+          case 2:
+                scanf("%d", &a);
+                scanf("%d", &b);
+            printf("%d - %d = %d \n", a, b, a-b);
+            break;
+          case 3:
+                scanf("%d", &a);
+                scanf("%d", &b);
+            printf("%d / %d = %d \n", a, b, a/b);
+            break;
+          case 4:
+                scanf("%d", &a);
+                scanf("%d", &b);
+            printf("%d x %d = %d \n", a, b, a*b);
+            break;
+          case 5:
+                scanf("%d", &a);
+                scanf("%d", &b);
+            printf("%d raiz de %d = %d \n", a, b, pow(a, 1/b));
+            break;
+          case 6:
+                scanf("%d", &a);
+                scanf("%d", &b);
+            printf("%d ^ %d = %d \n", a, b, pow(a, b));
+            break;
+        }
+        ler();
+    }
+}
+
+int main() {
+    printf("Escolha uma operacao:\n 1- soma;\n 2- subtracao;\n 3- divisao;\n 4- multiplicacao;\n 5- radiciacao;\n 6- exponeciacao.\n");
+    
+    ler();
+
+    return 0;
+}
