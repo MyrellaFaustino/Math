@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    // Inicializa o gerador de números aleatórios com uma semente baseada no tempo atual
+    srand(time(NULL));
+
+    // Gera um número aleatório em uma faixa específica, por exemplo, entre 1 e 10
+    int numeroEntre1e10 = (rand() % 10) + 1;
+    printf("Par (1) ou Impar? (2)\n");
+    
+    int operacao = 0, num = 0;
+    scanf("%d", &operacao);
+    
+    switch(operacao){
+        case 1: 
+            scanf("%d", &num);
+            if((num + numeroEntre1e10) % 2 == 0){
+                printf("%d + %d é par (VOCE GANHOU!)", num,numeroEntre1e10);
+            }else{
+                printf("%d + %d é impar (VOCE PERDEU!)", num,numeroEntre1e10);
+            }
+            break;
+        case 2: 
+            scanf("%d", &num);
+            if((num + numeroEntre1e10) % 2 == 1){
+                printf("%d + %d é impar (VOCE GANHOU!)", num , numeroEntre1e10);
+            }else{
+                printf("%d + %d é par (VOCE PERDEU!)", num , numeroEntre1e10);
+            }
+            break;
+    }
+
+    return 0;
+}
